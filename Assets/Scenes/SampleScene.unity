@@ -947,7 +947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 154440564}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1050236089}
+        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
+        m_MethodName: StartSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &154440564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,8 +4638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc602adbc6b93e44a81ac7676fb6405a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  prefab: {fileID: 8363908017680159535, guid: 7df67fa5356c5db41bdf747f456fecae, type: 3}
-  interval: 0.5
+  prefabToSpawn: {fileID: 8363908017680159535, guid: 7df67fa5356c5db41bdf747f456fecae, type: 3}
+  spawnPoint: {fileID: 1050236088}
 --- !u!1 &1060162406
 GameObject:
   m_ObjectHideFlags: 0

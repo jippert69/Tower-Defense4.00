@@ -1,17 +1,26 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject prefab;      // Assign in Inspector
-    public float interval = 0.5f;  // Spawn every 0.5 seconds
+    public GameObject prefabToSpawn;   // Prefab to spawn
+    public Transform spawnPoint;       // Where to spawn (optional)
 
-    void Start()
+    public void StartSpawn()
     {
-        InvokeRepeating(nameof(SpawnPrefab), interval, interval);
+        StartCoroutine(SpawnPrefabs());
     }
 
-    void SpawnPrefab()
+    private IEnumerator SpawnPrefabs()
     {
-        Instantiate(prefab, transform.position, transform.rotation);
+        for (int i = 0; i < 10; i++)
+        {
+            // Spawn at spawnPoint if assigned, otherwise at this object's position
+            Vector3 position = spawnPoint ? spawnPoint.position : transform.position;
+
+            Instantiate(prefabToSpawn, position, Quaternion.identity);
+
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }

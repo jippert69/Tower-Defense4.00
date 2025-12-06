@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 667336379623134935}
   - component: {fileID: 2095003290955532624}
   - component: {fileID: 6072882308235487695}
+  - component: {fileID: -2899892807715209764}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,3 +179,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 5078129623351040013, guid: 25bcc5b2ff840574bb6662a5842c9c19, type: 3}
+--- !u!114 &-2899892807715209764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363908017680159535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35220726f03d50c47bc4439fa87409d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyTimer

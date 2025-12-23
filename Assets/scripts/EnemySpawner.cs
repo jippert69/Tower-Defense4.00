@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;   // Prefab to spawn
-    public Transform spawnPoint;       // Where to spawn (optional)
+    public Transform spawnPoint;    
     private float waitTimer = 20;
     private float currentTime;
 

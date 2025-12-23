@@ -16,10 +16,16 @@ public class BuildSpot : MonoBehaviour
         rend.material = defaultMat; //non highlighted van start
     }
 
-    public void Highlight(bool on)//methode om highlight aan of uit te zetten
+    public void Highlight(bool on)
+{
+    if (isBezet)
     {
-        rend.material = on ? highlightMat : defaultMat;// ternary operator wat dat ook is
+        rend.material = defaultMat;
+        return;
     }
+
+    rend.material = on ? highlightMat : defaultMat;
+}
 
     public void Build(GameObject towerPrefab)
     {

@@ -3,8 +3,20 @@ using System.Collections.Generic;
 
 public class TorenManager : MonoBehaviour
 {
-    public List<BuildSpot> allSpots = new List<BuildSpot>();//lijst van alle bouwplekken
+    public static TorenManager Instance { get; private set; }// Singleton instance
+    
+    public List<BuildSpot> allSpots = new List<BuildSpot>();
     public GameObject selectedTower;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     public void SelectTower(GameObject towerPrefab)
     {
